@@ -1,0 +1,79 @@
+server:
+  port: 8000
+spring:
+  profiles:
+    active: test
+  application:
+    name: dx3907    # 项目名称尽量用小写
+
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    springfox: warn
+    top.hunaner.lol: INFO
+#在此指定保存文件的路径
+#locale:
+#    storageProperties:
+#        location: "/Users/aliyun/Documents/GitHub/DX3907"
+---
+spring:
+  profiles: development
+  datasource:
+      platform: mysql
+      name: mysql
+      url: jdbc:mysql://windows.james.com:3306/test
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: yang
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    top.hunaner.lol: DEBUG
+---
+spring:
+  profiles: production
+logging:
+  level:
+    root: warn
+    org.hibernate: ware
+    org.hibernate.type.descriptor.sql.BasicBinder: warn
+    org.hibernate.type.descriptor.sql.BasicExtractor: warn
+    top.hunaner.lol: info
+---
+spring:
+  profiles: test
+
+#  datasource:
+#    platform: h2
+#    name: h2db
+#    url: jdbc:h2:./test
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+#  h2:
+#    console:
+#      enabled: true
+#      path: /config/h2-console
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    cache: false
+    
+logging:
+  level:
+    root: INFO
+    org.thymeleaf: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
+    org.hibernate.type.descriptor.sql.BasicExtractor: INFO
+    top.hunaner.lol: DEBUG
+    org.spring.web: DEBUG
+
