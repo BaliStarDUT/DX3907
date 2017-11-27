@@ -32,4 +32,11 @@ public class HerosRepositoryImpl implements HerosRepository {
     public Lolhero save(Lolhero hero) {
         return (Lolhero) dao.save(hero);
     }
+
+    @Override
+    public Lolhero findByName(String name) {
+        Lolhero hero = new Lolhero(name,name,
+                "末日使者","稻草人","法师",name,name);
+        return hero;
+    }
 }

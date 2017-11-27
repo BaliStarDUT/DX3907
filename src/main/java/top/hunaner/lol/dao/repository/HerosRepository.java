@@ -29,6 +29,7 @@ public interface HerosRepository {
 	 * @param hero
 	 */
 	Lolhero save(Lolhero hero);
+	Lolhero findByName(String name);
 }
 //@RepositoryRestResource(collectionResourceRel="heros",path="heros")
 //public interface HerosRepository extends PagingAndSortingRepository<Lolhero,Integer>{

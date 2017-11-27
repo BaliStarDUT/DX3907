@@ -8,4 +8,5 @@ import java.util.Collection;
 public interface HerosService {
 	Collection<Lolhero> getAll();
 	Lolhero saveHero(Lolhero hero);
+	Lolhero getHero(String heroName);
 }

@@ -46,4 +46,9 @@ public class HerosServiceImpl implements HerosService {
 		return lolhero;
 	}
 
+	@Override
+	public Lolhero getHero(String heroName) {
+		return herosRepository.findByName(heroName);
+	}
+
 }

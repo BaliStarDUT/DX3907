@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -76,6 +77,14 @@ public class HerosController{
 		modelAndView.addObject("msg","获取成功");
 		modelAndView.setViewName("heros/heros_info_list");
         return modelAndView;
+	}
+	@RequestMapping(value="/{heroName}",method=RequestMethod.GET)
+	public ModelAndView  getOneView(@PathVariable String heroName ,ModelAndView modelAndView){
+		Lolhero hero = this.herosService.getHero(heroName);
+		modelAndView.addObject("heroinfo",hero);
+		modelAndView.addObject("msg","获取成功");
+		modelAndView.setViewName("heros/heros_info");
+		return modelAndView;
 	}
 	@RequestMapping(value = "/data/all",method = RequestMethod.GET)
 	public ResponseEntity<Collection<Lolhero>> getAll(){
