@@ -1,199 +1,36 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html>
 <head>
-  <link rel="stylesheet" href="/static/css/bootstrap.min.css"></link>
-  <script src="/static/js/jquery.min.js"></script>
-  <script src="/static/js/bootstrap.min.js"></script>
-  <title th:text="${title}">英雄联盟英雄图</title>
+    <title>Hello Angular</title>
+    <link rel="stylesheet" type="text/css"
+          href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-	<div class="container theme-showcase" role="main">
-		<div class="masthead">
-			<nav class="navbar">
-			  <ul class="nav nav-justified">
-				<li class="active"><a href="heros">Champion Grid</a></li>
-				<li><a th:href="${h2console}">h2_DataBase_console</a></li>
-				<li><a href="heros/new">LoL Heros</a></li>
-				<li><a href="resources/gentelella/production/index.html">Gentelella</a></li>
-				<li><a href="resources/view/angular.html">Angular</a></li>
-				<li><a href="resources/view/dashboard.html">DashBoard</a></li>
-			  </ul>
-			</nav>
-		</div>
-		<div class="jumbotron">
-			<h1>英雄联盟</h1>
-			<p>在符文之地，魔法就是一切。	</p>
-		</div>
-<!-- 	<div class="row"> -->
-<!-- 		<div class="col-lg-4"> -->
-<!--           <h2>Heading</h2> -->
-<!--           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p> -->
-<!--           <p><a class="btn btn-primary" href="#" role="button">View details »</a></p> -->
-<!--         </div> -->
-<!--         <div class="col-lg-4"> -->
-<!--           <h2>Heading</h2> -->
-<!--           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p> -->
-<!--           <p><a class="btn btn-primary" href="#" role="button">View details »</a></p> -->
-<!--         </div> -->
-<!--         <div class="col-lg-4"> -->
-<!--           <h2>Heading</h2> -->
-<!--           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p> -->
-<!--           <p><a class="btn btn-primary" href="#" role="button">View details »</a></p> -->
-<!--         </div> -->
-<!-- 	</div> -->
-		<div class="row">
-				<div class="col-md-4">
-						<div class="row">
-						  <div class="col-md-4">
-								<img title="荆棘之兴" class="img-rounded" src="./resources/image/champions/Zyra_Square_0.png" alt="pic notfound" />
-						  </div>
-						  <div class="col-md-8">
-								<p>荆棘之兴</p>
-								<p>婕拉</p>
-								<p>
-										<span class="label label-info">法师</span>
-										<span class="label label-info">辅助</span>
-								</p>
-								<audio style="max-width: 90%" src="./resources/music/Zyra.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-						  </div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="row">
-							  <div class="col-md-4">
-									<img title="时光守护者" class="img-rounded" src="./resources/image/champions/Zilean_Square_0.png" alt="pic notfound" />
-							  </div>
-							  <div class="col-md-8">
-									<p>时光守护者</p>
-									<p>基兰</p>
-									<p>
-											<span class="label label-info">法师</span>
-											<span class="label label-info">辅助</span>
-									</p>
-									<audio style="max-width: 90%" src="./resources/music/Zilean.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-							  </div>
-						</div>
-				</div>
-				<div class="col-md-4">
-							<div class="row">
-								  <div class="col-md-4">
-										<img title="爆破鬼才" class="img-rounded" src="./resources/image/champions/Ziggs_Square_0.png" alt="pic notfound" />
-								  </div>
-								  <div class="col-md-8">
-										<p>爆破鬼才</p>
-										<p>吉格斯</p>
-										<p>
-												<span class="label label-info">法师</span>
-										</p>
-										<audio style="max-width: 90%" src="./resources/music/Ziggs.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-								  </div>
-							</div>
-				</div>
-				<div class="col-md-4">
-							<div class="row">
-								  <div class="col-md-4">
-										<img title="影流之主" class="img-rounded" src="./resources/image/champions/Zed_Square_0.png" alt="pic notfound" />
-								  </div>
-								  <div class="col-md-8">
-										<p>影流之主</p>
-										<p>劫</p>
-										<p>
-												<span class="label label-info">刺客</span>
-												<span class="label label-info">战士</span>
-										</p>
-										<audio style="max-width: 90%" src="./resources/music/Zed.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-								  </div>
-							</div>
-				</div>
-				<div class="col-md-4">
-						<div class="row">
-								  <div class="col-md-4">
-										<img title="生化魔人" class="img-rounded" src="./resources/image/champions/Zac_Square_0.png" alt="pic notfound" />
-								  </div>
-								  <div class="col-md-8">
-										<p>生化魔人</p>
-										<p>扎克</p>
-										<p>
-												<span class="label label-info">坦克</span>
-												<span class="label label-info">战士</span>
-										</p>
-										<audio style="max-width: 90%" src="./resources/music/Zac.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-								  </div>
-							</div>
-				</div>
-				<div class="col-md-4">
-						<div class="row">
-								  <div class="col-md-4">
-										<img title="掘墓者" class="img-rounded" src="./resources/image/champions/Yorick_Square_0.png" alt="pic notfound" />
-								  </div>
-								  <div class="col-md-8">
-										<p>掘墓者</p>
-										<p>约里克</p>
-										<p>
-												<span class="label label-info">法师</span>
-												<span class="label label-info">战士</span>
-										</p>
-										<audio style="max-width: 90%" src="./resources/music/Yorick.mp3" controls="controls" preload="none">Your browser does not support the audio tag.</audio>
-								  </div>
-							</div>
-				</div>
-		</div>
-
-
-		<div id="myCarousel" class="carousel slide">
-			<!-- 轮播（Carousel）指标 -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-			</ol>
-			<!-- 轮播（Carousel）项目 -->
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="./resources/image/champions/Fiddlesticks_Splash_0.jpg" alt="First slide"/>
-				</div>
-				<div class="item">
-					<img src="./resources/image/champions/Fiddlesticks_Splash_1.jpg" alt="Second slide"/>
-				</div>
-				<div class="item">
-					<img src="./resources/image/champions/Fiddlesticks_Splash_2.jpg" alt="Third slide"/>
-				</div>
-			</div>
-			<!-- 轮播（Carousel）导航 -->
-			<a class="carousel-control left" href="#myCarousel"
-			   data-slide="prev">&lsaquo;
-			</a>
-			<a class="carousel-control right" href="#myCarousel"
-			   data-slide="next">&rsaquo;
-			</a>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<!--<div class="row">-->
-				<img title="末日使者" class="img-rounded" src="./resources/image/champions/Fiddlesticks_0.jpg" alt="pic notfound" />
-				<!--</div>-->
-			</div>
-			<div class="col-md-4">
-				<!--<div class="row">-->
-				<img title="末日使者" class="img-rounded" src="./resources/image/champions/Fiddlesticks_0.jpg" alt="pic notfound" />
-				<!--</div>-->
-			</div>
-			<div class="col-md-4">
-				<!--<div class="row">-->
-				<img title="末日使者" class="img-rounded" src="./resources/image/champions/Fiddlesticks_0.jpg" alt="pic notfound" />
-				<!--</div>-->
-			</div>
-		</div>
-
-	</div>
-	<hr></hr>
-
-	<div>
-		<ul>
-			<li th:each="file : ${files}">
-				<a th:text="${file}" />
-			</li>
-		</ul>
-	</div>
+<div class="container">
+    <h1>Greeting</h1>
+    <div><app/></div>
+</div>
+<script type="text/javascript" src="webjars/core-js/client/shim.min.js"></script>
+<script type="text/javascript" src="webjars/rxjs/bundles/Rx.min.js"></script>
+<script type="text/javascript" src="webjars/zone.js/dist/zone.min.js"></script>
+<script type="text/javascript" src="webjars/reflect-metadata/Reflect.js"></script>
+<script type="text/javascript" src="webjars/angular__core/bundles/core.umd.js"></script>
+<script type="text/javascript" src="webjars/angular__common/bundles/common.umd.js"></script>
+<script type="text/javascript" src="webjars/angular__compiler/bundles/compiler.umd.js"></script>
+<script type="text/javascript"
+        src="webjars/angular__platform-browser/bundles/platform-browser.umd.js"></script>
+<script type="text/javascript"
+        src="webjars/angular__platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"></script>
+<script type="text/javascript" src="webjars/angular__http/bundles/http.umd.js"></script>
+<script type="text/javascript" src="js/hello.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      ng.platformBrowserDynamic.platformBrowserDynamic().bootstrapModule(AppModule);
+    });
+  </script>
 </body>
 </html>

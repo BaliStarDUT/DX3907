@@ -24,7 +24,7 @@
 					  		<p th:text="${hero.nickname}" />
 					  		<p th:text="${hero.nameCn}" />
  					  		<!--<p th:text="${hero.story}" />-->
-						    <p th:text="${hero.nameEn}" />
+						    <a th:attr="href=@{/heros/}+${hero.nameEn}"><p th:text="${hero.nameEn}" /></a>
 					  		<p>
 					  				<span class="label label-info"  th:text="${hero.type}"></span>
 <!--				  				<span class="label label-info">辅助</span> -->

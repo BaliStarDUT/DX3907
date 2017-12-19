@@ -25,13 +25,16 @@
 					<!-- 轮播（Carousel）项目 -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="/resources/image/champions/Fiddlesticks_0.jpg" alt="First slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_0.jpg" alt="First slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_0.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 						<div class="item">
-							<img src="/resources/image/champions/Fiddlesticks_1.jpg" alt="Second slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_1.jpg" alt="Second slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_1.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 						<div class="item">
-							<img src="/resources/image/champions/Fiddlesticks_2.jpg" alt="Third slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_2.jpg" alt="Third slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_2.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 					</div>
 					<!-- 轮播（Carousel）导航 -->
@@ -47,6 +50,9 @@
      <!--th:attr="src=@{/lolheros/images/}+${hero.headpicUrl},title=${hero.nickname},alt=${hero.nickname}" />-->
 				<!--</div>-->
 			</div>
+			<div class="col-md-8">
+				<h2 th:text="${heroinfo.nameEn}">费德提克</h2>
+			</div>
 		</div>
 		<hr/>
 		<div class="row">
@@ -61,13 +67,16 @@
 					<!-- 轮播（Carousel）项目 -->
 					<div class="carousel-inner">
 						<div class="item active">
-							<img src="/resources/image/champions/Fiddlesticks_Splash_0.jpg" alt="First slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_Splash_0.jpg" alt="First slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_Splash_0.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 						<div class="item">
-							<img src="/resources/image/champions/Fiddlesticks_Splash_1.jpg" alt="Second slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_Splash_1.jpg" alt="Second slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_Splash_1.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 						<div class="item">
-							<img src="/resources/image/champions/Fiddlesticks_Splash_2.jpg" alt="Third slide"/>
+							<img src="/resources/image/champions/Fiddlesticks_Splash_2.jpg" alt="Third slide"
+								 th:attr="src=@{/lolheros/images/}+${heroinfo.nameEn}+@{_Splash_2.jpg},title=${heroinfo.nameEn},alt=${heroinfo.nameEn}"/>
 						</div>
 					</div>
 					<!-- 轮播（Carousel）导航 -->

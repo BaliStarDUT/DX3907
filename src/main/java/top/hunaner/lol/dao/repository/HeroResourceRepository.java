@@ -24,7 +24,7 @@ public class HeroResourceRepository {
             for(int i=0;i<heroImageList.size();i++){
                 String imageName = heroImageList.get(i);
                 String soundName = heroSoundList.get(i);
-                Lolhero hero = new Lolhero("费德提克",soundName.substring(0,soundName.length()-3),
+                Lolhero hero = new Lolhero("费德提克",soundName.substring(0,soundName.length()-4),
                     "末日使者","稻草人","法师",imageName,soundName);
                 heroList.add(hero);
             }
